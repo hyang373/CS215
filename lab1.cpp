@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello, Nathan and Jared!" << endl;
+	cout << "Hello!" << endl;
 	cout << "My name is Helen Yang. Nice to meet you!" << endl;
 	cout << "   @@@@@@  " << endl;
 	cout << " |       |" << endl;
