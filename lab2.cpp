@@ -33,15 +33,6 @@ int main()
 	const double ROUND_OFF = 0.005;					//declare a constant: round off value (make sure pennies round up)
 	
 	double current_change = change;
-	
-	/* declare a variable: 
-	* - change of dollars
-	* - change of quarter needed
-	* - change of dimes needed
-	* - change of nickels needed
-	* - change of pennies needed
-	*/
-	
 	int dollar_change;
 	int quarter_change;
 	int dime_change;
@@ -74,7 +65,7 @@ int main()
 	cout << "Quarters:" << setw(7) << quarter_change << endl;
 	cout << "Dimes:" << setw(10) << dime_change << endl;
 	cout << "Nickels:" << setw(8) << nickel_change << endl;
-	cout << "Pennies:" << setw(8) << penny_change << endl;
+	cout << "Pennies:" << setw(8) << pennies_change << endl;
 
 	return 0;
 
