@@ -23,6 +23,10 @@ int main()
 	cin >> amount_received;
 		
 	double change = amount_received - amount_due;	//declare a variable to store the total change the cashier needs to give back
+	if(change < 0){
+		cout << "Insufficient Amount Received" << endl;
+		return 0;
+	}
 	cout << "The change is: " << endl;
 	
 	const int DOLLAR_VALUE = 1;					//declare a constant: dollar = $1
