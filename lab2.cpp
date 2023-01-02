@@ -40,22 +40,27 @@ int main()
 	int pennies_change;
 	
 	for(int i = 0; i < 5; i++){
-		switch (i){
+		switch(i){
 			case 0:
 				dollar_change = current_change / DOLLAR_VALUE;
 				current_change = current_change - dollar_change * DOLLAR_VALUE;
+				continue;
 			case 1:
 				quarter_change = current_change / QUARTER_VALUE;
 				current_change = current_change - quarter_change * QUARTER_VALUE;
+				continue;
 			case 2:
 				dime_change = current_change / DIME_VALUE;
 				current_change = current_change - dime_change * DIME_VALUE;
+				continue;
 			case 3:
 				nickel_change = current_change / NICKEL_VALUE;
 				current_change = current_change - nickel_change * NICKEL_VALUE;
+				continue;
 			case 4:
 				pennies_change = (current_change / PENNY_VALUE) + ROUND_OFF;
 				current_change = current_change - pennies_change * PENNY_VALUE;
+				continue;
 			default:
 				continue;
 		}
