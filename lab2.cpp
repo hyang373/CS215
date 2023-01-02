@@ -33,6 +33,15 @@ int main()
 	const double ROUND_OFF = 0.005;					//declare a constant: round off value (make sure pennies round up)
 	
 	double current_change = change;
+	
+	/* declare a variable: 
+	* - change of dollars
+	* - change of quarter needed
+	* - change of dimes needed
+	* - change of nickels needed
+	* - change of pennies needed
+	*/
+	
 	int dollar_change;
 	int quarter_change;
 	int dime_change;
@@ -47,23 +56,19 @@ int main()
 			case 1:
 				quarter_change = current_change / QUARTER_VALUE;
 				current_change = current_change - quarter_change * QUARTER_VALUE;
+			case 2:
+				dime_change = current_change / DIME_VALUE;
+				current_change = current_change - dime_change * DIME_VALUE;
+			case 3:
+				nickel_change = current_change / NICKEL_VALUE;
+				current_change = current_change - nickel_change * NICKEL_VALUE;
+			case 4:
+				pennies_change = (current_change / PENNY_VALUE) + ROUND_OFF;
+				current_change = current_change - pennies_change * PENNY_VALUE;
+			default:
+				continue;
 		}
 	}
-	
-	//declare a variable: change of dollars
-	int dollar_change = change / DOLLAR_VALUE;
-	
-	//declare a variable: change of quarter needed
-	int quarter_change = (change - dollar_change) / QUARTER_VALUE;
-	
-	//declare a variable: change of dimes needed
-	int dime_change = (change - dollar_change - quarter_change * QUARTER_VALUE)/ DIME_VALUE;
-	
-	//declare a variable: change of nickels needed
-	int nickel_change = (change - dollar_change - quarter_change * QUARTER_VALUE - dime_change * DIME_VALUE) / NICKEL_VALUE;
-	
-	//declare a variable: change of pennies needed
-	int penny_change = ((change - dollar_change - quarter_change * QUARTER_VALUE - dime_change * DIME_VALUE - nickel_change * NICKEL_VALUE) / PENNY_VALUE) + ROUND_OFF;
 	
 	cout << "Dollars:" << setw(8) << dollar_change << endl;
 	cout << "Quarters:" << setw(7) << quarter_change << endl;
