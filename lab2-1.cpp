@@ -32,6 +32,24 @@ int main()
 	const double PENNY_VALUE = 0.01;				//declare a constant: penny = $0.01
 	const double ROUND_OFF = 0.005;					//declare a constant: round off value (make sure pennies round up)
 	
+	double current_change = change;
+	int dollar_change;
+	int quarter_change;
+	int dime_change;
+	int nickel_change;
+	int pennies_change;
+	
+	for(int i = 0; i < 5; i++){
+		switch (i){
+			case 0:
+				dollar_change = current_change / DOLLAR_VALUE;
+				current_change = current_change - dollar_change * DOLLAR_VALUE;
+			case 1:
+				quarter_change = current_change / QUARTER_VALUE;
+				current_change = current_change - quarter_change * QUARTER_VALUE;
+		}
+	}
+	
 	//declare a variable: change of dollars
 	int dollar_change = change / DOLLAR_VALUE;
 	
