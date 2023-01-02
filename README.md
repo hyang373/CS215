@@ -77,6 +77,20 @@ Write a program that repeatedly reads a sequence of Positive integers from the u
 After finishing collecting user input, it prints the sum of all valid user input numbers. 
 Then quit the program.
 
+## Project 1
+
+In a game named Nim, two players alternately take marbles from a pile. In each turn, a player must make a legal move taking at least one but at most half of the marbles from the pile and then let the other player take a turn.  The player who is to take the last marble loses the game. 
+
+You will write a C++ program that enables the computer to play against a human opponent. 
+ - First, your program should generate a random integer between PILE_MIN and PILE_MAX to denote the initial pile size. 
+ - Second,  your  program  should  generate  0  or  1  randomly  to  decide  which  player  (the computer or the user) takes the first turn.
+ - Third, your program should again generate 0 or 1 randomly to decide that  the computer takes  either  “smart”  move  or  “non-smart”  move.
+  - Under  “smart-move”  mode,  the computer  needs  to  make  the  following  legal  move  to win  the  game:  take  off  enough marbles to make the size of the remaining pile a power of two minus one (1, 3, 7, 15, 31 are some examples of the power of two minus 1) if the current pile size is not one of those power  of  two  minus  1.  When  the  current  pile  size  is  already a 2’s power –  1, make a random move taking at least one but at most half of the marbles.
+  - On the other hand, when the  computer  is  under “non-smart-move” mode,  the  computer makes  a  random  legal move: taking at least one but at most half of the marbles. When human takes his/her turn, your program should ask how many marbles the user wants to remove and then collect the user input. If the user input is not valid, you program should repeatedly ask the user to enter how  many  marbles  the  user  wants  to  remove  from  the  pile  until  the  user  makes  a  legal move.
+ - After each legal move either from the computer or the human player, your program should display the number of marbles on current pile
+ - When there is only one marble left on the pile, if it is the computer’s turn, the computer loses the game, otherwise the human player loses the game.  
+ 
+ 
 ## Lab 6
 ## Lab 7
 ## Lab 8
