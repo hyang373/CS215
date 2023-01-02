@@ -63,6 +63,20 @@ The last digit of a credit card number is the check digit, which protects agains
 After the user supplies an 8-digit number, your program should implement the above algorithm, then print out whether the number is a valid credit card number or not. If it is not valid, you should print out the value of the check digit that would make the number valid.
 
 ## Lab 5
+
+**The purpose of this lab assignment is** : <br>
+ - to continue practicing conditional statements
+ - to continue practicing loop statements
+ - to validate the user input 
+
+**Prompt** : <br>
+Write a program that repeatedly reads a sequence of Positive integers from the user as inputs, until the user clicks “Q” or “q” to quit the problem. Each time after the user inputs a valid positive integer, it then prints:
+ - The corresponding item in the cumulative total sequence. For example, if the user input sequence is 1 7 9 -4 5, its cumulative total sequence is 1 8 17 13 18 . When the user  first types 1, its corresponding item in the cumulative total sequence is 1; then the user types 7, its corresponding item is 8 (it is equal to 1+7); the user then types 9, its corresponding item is 17 (it is equal to 1+7+9); and so on
+ - Whether the valid user input number is “a Power of Two Minus One”. “A power of Two Minus One” is a number which is equal to a power of two minus one, such as 1, 3, 7, 15, 31, 63, 127, ... and so on.
+
+After finishing collecting user input, it prints the sum of all valid user input numbers. 
+Then quit the program.
+
 ## Lab 6
 ## Lab 7
 ## Lab 8
