@@ -1,7 +1,6 @@
 /*
  Project : Project 1
  Author : Helen Yang
- Class : CS 215-001
  Date : February 24, 2022
  Purpose : To create a game that allow a player to play against a computer that is in a smart/non-smart mode 
 */
@@ -120,44 +119,7 @@ void player_play(int& pile)
 
     if (player_take > 0 && player_take <= halfPile)
     {
-        /* check if a double type value
         
-        string check_Input = to_string(player_take);
-        bool checkInput; 
-        for(int i = 0; i < check_Input.length(); i++)
-        {
-            if (isdigit(check_Input[i]) == false)
-            {
-                checkInput = false;
-                break;
-            }
-            else
-            {
-                checkInput = true;
-            }
-        }
-
-        if(checkInput == false)
-        {
-            cout << "Invalid input, please try again..." << endl;
-            cout << "Your play....you may take 1 to " << halfPile << " marbles." << endl;
-            cout << "You take : ";
-            cin >> player_take;   
-        }
-        else
-        {
-           cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-            cout << "You will take " << player_take << " marbles." << endl;
-            pile = pile - player_take;
-            if (pile > 1)
-            {
-                cout << " " << endl;
-            } 
-        }
-        
-       *//////////////////
-
         //clear everything that is after the number input
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
