@@ -62,7 +62,22 @@ The last digit of a credit card number is the check digit, which protects agains
 
 After the user supplies an 8-digit number, your program should implement the above algorithm, then print out whether the number is a valid credit card number or not. If it is not valid, you should print out the value of the check digit that would make the number valid.
 
-## Lab 5
+## Project 1
+
+*** Project 1 is completed through lab 5 (part 1) and lab 6 (part 2)
+
+In a game named Nim, two players alternately take marbles from a pile. In each turn, a player must make a legal move taking at least one but at most half of the marbles from the pile and then let the other player take a turn.  The player who is to take the last marble loses the game. 
+
+You will write a C++ program that enables the computer to play against a human opponent. 
+ - First, your program should generate a random integer between PILE_MIN and PILE_MAX to denote the initial pile size. 
+ - Second,  your  program  should  generate  0  or  1  randomly  to  decide  which  player  (the computer or the user) takes the first turn.
+ - Third, your program should again generate 0 or 1 randomly to decide that  the computer takes  either  “smart”  move  or  “non-smart”  move.
+   - Under  “smart-move”  mode,  the computer  needs  to  make  the  following  legal  move  to win  the  game:  take  off  enough marbles to make the size of the remaining pile a power of two minus one (1, 3, 7, 15, 31 are some examples of the power of two minus 1) if the current pile size is not one of those power  of  two  minus  1.  When  the  current  pile  size  is  already a 2’s power –  1, make a random move taking at least one but at most half of the marbles.
+   - On the other hand, when the  computer  is  under “non-smart-move” mode,  the  computer makes  a  random  legal move: taking at least one but at most half of the marbles. When human takes his/her turn, your program should ask how many marbles the user wants to remove and then collect the user input. If the user input is not valid, you program should repeatedly ask the user to enter how  many  marbles  the  user  wants  to  remove  from  the  pile  until  the  user  makes  a  legal move.
+ - After each legal move either from the computer or the human player, your program should display the number of marbles on current pile
+ - When there is only one marble left on the pile, if it is the computer’s turn, the computer loses the game, otherwise the human player loses the game.  
+ 
+### Lab 5
 
 **The purpose of this lab assignment is** : <br>
  - to continue practicing conditional statements
@@ -77,20 +92,11 @@ Write a program that repeatedly reads a sequence of Positive integers from the u
 After finishing collecting user input, it prints the sum of all valid user input numbers. 
 Then quit the program.
 
-## Project 1 / Lab 6
+## Project 2
 
-In a game named Nim, two players alternately take marbles from a pile. In each turn, a player must make a legal move taking at least one but at most half of the marbles from the pile and then let the other player take a turn.  The player who is to take the last marble loses the game. 
+*** Project 2 is completed through 2 parts, lab 8 (part 1) and lab 9 (part 2)
 
-You will write a C++ program that enables the computer to play against a human opponent. 
- - First, your program should generate a random integer between PILE_MIN and PILE_MAX to denote the initial pile size. 
- - Second,  your  program  should  generate  0  or  1  randomly  to  decide  which  player  (the computer or the user) takes the first turn.
- - Third, your program should again generate 0 or 1 randomly to decide that  the computer takes  either  “smart”  move  or  “non-smart”  move.
-   - Under  “smart-move”  mode,  the computer  needs  to  make  the  following  legal  move  to win  the  game:  take  off  enough marbles to make the size of the remaining pile a power of two minus one (1, 3, 7, 15, 31 are some examples of the power of two minus 1) if the current pile size is not one of those power  of  two  minus  1.  When  the  current  pile  size  is  already a 2’s power –  1, make a random move taking at least one but at most half of the marbles.
-   - On the other hand, when the  computer  is  under “non-smart-move” mode,  the  computer makes  a  random  legal move: taking at least one but at most half of the marbles. When human takes his/her turn, your program should ask how many marbles the user wants to remove and then collect the user input. If the user input is not valid, you program should repeatedly ask the user to enter how  many  marbles  the  user  wants  to  remove  from  the  pile  until  the  user  makes  a  legal move.
- - After each legal move either from the computer or the human player, your program should display the number of marbles on current pile
- - When there is only one marble left on the pile, if it is the computer’s turn, the computer loses the game, otherwise the human player loses the game.  
-
-## Lab 8
+### Lab 8
 
 **The purpose of this lab assignment** : <br>
  - to understand the concept of class, object, encapsulation, OOP 
@@ -100,7 +106,7 @@ You will write a C++ program that enables the computer to play against a human o
 **Prompt** : <br>
 In this Lab assignment, you will help Professor P to implement a Gradebook Report, which allows Professor P enter Final scores for CS215 students, then displays each score and its corresponding letter grade, calculate the average score, and find the highest score and lowest score.
 
-## Lab 9
+### Lab 9
 
 **The purpose of this lab assignment is** : <br>
  - Continue practicing how to define your own class
@@ -110,5 +116,12 @@ In this Lab assignment, you will help Professor P to implement a Gradebook Repor
 **Problem** : <br>
 In this Lab assignment, you will continue working on the second part of Project 2, and complete the definition of the following class, named Gradebook, that provides the vector of FinalGrade objects to store the sequence of final scores, declared in Gradebook.h.
  
-## Lab 10
-## Lab 11
+## Project 3
+
+Write a program that plays a simple card game, named War (also known as Battle in the United  Kingdom)  (https://en.wikipedia.org/wiki/War_(card_game)),  typically  played by two players using a standard playing card deck. The objective of the game is to win all of the cards, and often played by children. The game is played as follows: 
+ 1. Each player gets dealt half the deck, 26 cards, and the cards are put face down in the pile in front of the players.
+ 2. Both player turn their top card face up at the same time. The person with the higher card wins the draw, and takes both the cards. They are put to the bottom of the pile, which the player can continue using cards on his/her pile. Aces are high, and suits are ignored.
+ 3. If the two cards played are of equal value, then there is a "war". Both players place the next three cards face down and then another card face-up. The owner of the higher face-up card wins the “war” and adds all the cards on the table to the bottom of the winner’s pile. If the face-up cards are again equal, then the battle  repeats  with  another  set  of  face-down/up  cards.  This  repeats  until  one player's face-up card is higher than his/her opponent's or  one  player does not have enough cards to finish the war then loses immediately.
+ 4. First player to finish all his/her cards loses the game. 
+ 5. If a player finishes his/her cards during a “war” without having enough cards to finish the “war” then loses immediately.
+
