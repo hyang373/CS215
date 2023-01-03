@@ -52,5 +52,15 @@ char FinalGrade::decideLetterGrade() const {
 // print the score and letter grade in the format: (for example)
 // Score: 88.00        Letter Grade: B
 void FinalGrade::print() const {
-	cout << "Score: " << setprecision(2) << score << "        Letter Grade: " << decideLetterGrade() << endl;
+	if (score == 100){
+		cout << "Score: " << setw(2) << setprecision(2) << score << "        Letter Grade: " << decideLetterGrade() << endl;
+	}
+	else if (score < 10)
+	{
+		cout << "Score:   " << setw(2) << setprecision(2) << score << "        Letter Grade: " << decideLetterGrade() << endl;
+	}
+	else{
+		cout << "Score:  " << setw(3) << setprecision(2) << score << "        Letter Grade: " << decideLetterGrade() << endl;
+	}
+	
 }
