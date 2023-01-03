@@ -77,14 +77,7 @@ Write a program that repeatedly reads a sequence of Positive integers from the u
 After finishing collecting user input, it prints the sum of all valid user input numbers. 
 Then quit the program.
 
-# Lab 6
-
-**The purpose of this lab assignment is** : <br> 
- - to practice how to define your own functions 
-
-## Project 1 / Lab 7
-
-   *** Project 1 is a combination of lab 5 and lab 6
+## Project 1 / Lab 6
 
 In a game named Nim, two players alternately take marbles from a pile. In each turn, a player must make a legal move taking at least one but at most half of the marbles from the pile and then let the other player take a turn.  The player who is to take the last marble loses the game. 
 
