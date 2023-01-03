@@ -11,9 +11,7 @@
 #include <string>
 #include <cmath>        // std::abs   
 #include "FinalGrade.h"
-#include "FinalGrade.cpp" 
 #include "Gradebook.h"
-#include "Gradebook.cpp"
 
 using namespace std;
 
