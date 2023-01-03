@@ -42,7 +42,7 @@ FinalGrade Gradebook::getMax() const{
 	{
 		if (scores[i].getScore() > maxScore) {
 			maxScore = scores[i].getScore();
-            FG = scores[i];
+			FG = scores[i];
 		}
 	}
 
@@ -52,9 +52,9 @@ FinalGrade Gradebook::getMax() const{
 // return a FinalGrade object, 
 // which holds the minimum score in the current gradebook
 FinalGrade Gradebook::getMin() const{
-    FinalGrade FG;
-
-    double minScore = 0;
+	FinalGrade FG;
+	
+	double minScore = 0;
 	minScore = scores[0].getScore();
 	for (int i = 0; i < scores.size(); i++)
 	{
@@ -63,13 +63,12 @@ FinalGrade Gradebook::getMin() const{
             FG = scores[i];
 		}
 	}
-
-    return FG;
+	return FG;
 }
 
 // return the average score among all scores in the current gradebook
 double Gradebook::getAverage() const{
-    double avg_score = 0;
+	double avg_score = 0;
 	double sum = 0;
 	for (int i = 0; i < scores.size(); i++)
 	{
