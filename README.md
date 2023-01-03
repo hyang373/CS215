@@ -141,3 +141,4 @@ Write a program that plays a simple card game, named War (also known as Battle i
  4. First player to finish all his/her cards loses the game. 
  5. If a player finishes his/her cards during a “war” without having enough cards to finish the “war” then loses immediately.
 
+DISCLAIMER: Portions of Project 3 is provided by the course instructor
