@@ -96,7 +96,7 @@ You will write a C++ program that enables the computer to play against a human o
  - to understand the concept of class, object, encapsulation, OOP 
  - to practice defining your own class 
 
-** Prompt** : <br>
+**Prompt** : <br>
 In this Lab assignment, you will help Professor P to implement a Gradebook Report, which allows Professor P enter Final scores for CS215 students, then displays each score and its corresponding letter grade, calculate the average score, and find the highest score and lowest score.
 
 ## Lab 9
