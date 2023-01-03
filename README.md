@@ -112,20 +112,22 @@ curve the scores based on her expected average.
 
 ### Lab 8
 
+*** Part 1 of Project 2
+
 **The purpose of this lab assignment** : <br>
  - to understand the concept of class, object, encapsulation, OOP 
- - to practice defining your own class <br>
- *** Part 1 of Project 2
+ - to practice defining your own class
  
 **Prompt** : <br>
 In this Lab assignment, you will help Professor P to implement a Gradebook Report, which allows Professor P enter Final scores for CS215 students, then displays each score and its corresponding letter grade, calculate the average score, and find the highest score and lowest score.
 
 ### Lab 9
 
+*** Part 2 of Project 2
+
 **The purpose of this lab assignment is** : <br>
  - Continue practicing how to define your own class
  - Get familiar with “HAS-A” relationship among classes <br>
- *** Part 2 of Project 2
  
 **Problem** : <br>
 In this Lab assignment, you will continue working on the second part of Project 2, and complete the definition of the following class, named Gradebook, that provides the vector of FinalGrade objects to store the sequence of final scores, declared in Gradebook.h.
