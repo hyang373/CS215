@@ -15,7 +15,6 @@
 #include <string>
 #include <vector>
 #include "FinalGrade.h"
-#include "FinalGrade.cpp"		// need this to be able to run using iOS
 
 using namespace std;
 
