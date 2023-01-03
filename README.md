@@ -114,7 +114,7 @@ curve the scores based on her expected average.
 
 **The purpose of this lab assignment** : <br>
  - to understand the concept of class, object, encapsulation, OOP 
- - to practice defining your own class 
+ - to practice defining your own class <br>
  *** Part 1 of Project 2
  
 **Prompt** : <br>
@@ -124,7 +124,7 @@ In this Lab assignment, you will help Professor P to implement a Gradebook Repor
 
 **The purpose of this lab assignment is** : <br>
  - Continue practicing how to define your own class
- - Get familiar with “HAS-A” relationship among classes 
+ - Get familiar with “HAS-A” relationship among classes <br>
  *** Part 2 of Project 2
  
 **Problem** : <br>
