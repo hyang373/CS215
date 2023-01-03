@@ -92,6 +92,15 @@ Write a program that repeatedly reads a sequence of Positive integers from the u
 After finishing collecting user input, it prints the sum of all valid user input numbers. 
 Then quit the program.
 
+### Lab 6
+
+**The purpose of this lab assignment is** : <br>
+ - to practice how to define your own functions 
+ 
+This Lab assignment will help you solve one sub-problem of Project 1: complete and test the definition of a function, named computer_play, shown as follows:
+
+    void computer_play(int& pile, bool smart) 
+
 ## Project 2
 
 *** Project 2 is completed through 2 parts, lab 8 (part 1) and lab 9 (part 2)
