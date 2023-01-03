@@ -79,6 +79,9 @@ Then quit the program.
 
 # Lab 6
 
+**The purpose of this lab assignment is** : <br> 
+ - to practice how to define your own functions 
+
 ## Project 1 / Lab 7
 
    *** Project 1 is a combination of lab 5 and lab 6
