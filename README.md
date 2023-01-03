@@ -105,6 +105,11 @@ This Lab assignment will help you solve one sub-problem of Project 1: complete a
 
 *** Project 2 is completed through 2 parts, lab 8 (part 1) and lab 9 (part 2)
 
+**Problem Statement** : <br>
+Write a program that can help Professor P to implement the Grade Curve Calculator: it 
+allows Professor P to calculate the average score for CS215 Final grade, and help her 
+curve the scores based on her expected average. 
+
 ### Lab 8
 
 **The purpose of this lab assignment** : <br>
