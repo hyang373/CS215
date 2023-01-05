@@ -1,7 +1,5 @@
 [CS215PA3.pdf](https://github.com/hyang373/CS215/files/10334399/CS215PA3.pdf)
 # CS215 Introduction to Program Design, Abstraction, and Problem Solving
-You can find my Lab Assignments and Projects codes
- - C++ Programming <br>
 
 ## Lab 1
 
