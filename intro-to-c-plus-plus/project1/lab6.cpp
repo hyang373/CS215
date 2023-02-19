@@ -1,5 +1,5 @@
 /*
- Project : Lab 6 ( as part of Project 1)
+ Project : Lab 6 (as part of Project 1)
  Author : Helen Yang
  Class : CS 215-001
  Date : February 16, 2022
