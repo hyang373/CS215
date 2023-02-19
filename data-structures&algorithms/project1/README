@@ -1,0 +1,9 @@
+/*****************************************************/
+Welcome to Sort Pokemon!
+
+This program uses Insertion Sort, QuickSort, and Mergesort to sort your pokemon. This program takes one argument (the file name).
+
+g++ sort_main.cpp -o sort
+./sort <csv_filename>
+
+/****************************************************/
