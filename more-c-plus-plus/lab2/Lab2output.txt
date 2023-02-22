@@ -1,0 +1,71 @@
+Star Wars: A Musical Journey (2005) (V)
+Star Wars: Episode II - Attack of the Clones (2002)
+Star Wars: Episode III - Revenge of the Sith (2005)
+Star Wars Episode V 1/2: The Han Solo Affair (2002)
+Star Wars: Revelations (2005) (V)
+Star Wars: The Clone Wars (2008)
+A Heartbeat Away (2011)
+A Warrior's Heart (2011)
+Changing Hearts (2002)
+Fireheart: The Legend of Tadas Blinda (2011)
+Heart of America (2002)
+Heartbreak Hospital (2002)
+Heartlands (2002)
+Hungry Hearts (2002)
+I Am Trying to Break Your Heart (2002)
+Junkhearts (2011)
+Language of a Broken Heart (2011)
+Puphedz: The Tattle-Tale Heart (2002)
+Strange Hearts (2002)
+The Heart of Me (2002)
+Wounded Hearts (2002)
+   60  sort -d imdb.txt > sorted_imdb.txt
+   61  ls
+   62  cat sorted_imdb.txt
+   63  grep -E "^Star Wars.*\<200.*[2-8]\>" sorted_imdb.txt > Lab2output.txt
+   64  ls
+   65  cat Lab2output.txt
+   66  ls
+   67  grep -i "heart.*\(2002\|2011\)" sorted_imdb.txt >> Lab2output.txt 
+   68  ls
+   69  cat Lab2output.txt
+   70  cd
+   71  history | tail -20 >> Lab2output.txt
+   72  ls
+   73  cat Lab2output.txt
+   74  cd CS216
+   75  cs Lab2
+   76  cd Lab2
+   77  ls
+   78  cat Lab2output.txt
+   79  history | tail -20 >> Lab2output.txt
+   52  mkdir Lab2
+   53  ls
+   54  cd Lab2
+   55  curl -O https://www.cs.uky.edu/~yipike/CS216/imdb.txt
+   56  cat imdb.txt
+   57  man sort
+   58  man grep
+   59  sort -d imdb.txt
+   60  sort -d imdb.txt > sorted_imdb.txt
+   61  ls
+   62  cat sorted_imdb.txt
+   63  grep -E "^Star Wars.*\<200.*[2-8]\>" sorted_imdb.txt > Lab2output.txt
+   64  ls
+   65  cat Lab2output.txt
+   66  ls
+   67  grep -i "heart.*\(2002\|2011\)" sorted_imdb.txt >> Lab2output.txt 
+   68  ls
+   69  cat Lab2output.txt
+   70  cd
+   71  history | tail -20 >> Lab2output.txt
+   72  ls
+   73  cat Lab2output.txt
+   74  cd CS216
+   75  cs Lab2
+   76  cd Lab2
+   77  ls
+   78  cat Lab2output.txt
+   79  history | tail -20 >> Lab2output.txt
+   80  cat Lab2output.txt
+   81  history | tail -30 >> Lab2output.txt
