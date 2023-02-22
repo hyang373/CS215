@@ -1,0 +1,59 @@
+    1  ls
+    2  man
+    3  man man
+    4  pwd
+    5  whoami
+    6  exit
+    7  pwd
+    8  cd /home/hya230
+    9  mkdir CS216
+   10  pwd
+   11  cd ..
+   12  cd..
+   13  cd ..
+   14  pwd
+   15  cd
+   16  cd ~
+   17  pwd
+   18  cd ~
+   19  mkdir CS216
+   20  cd ~/hya230
+   21  cd ~/CS216
+   22  mkdir Lab1
+   23  ls
+   24  cd ..
+   25  cd ~/CS216/Lab1
+   26  pwd
+   27  pwd > file1
+   28  ls
+   29  cat file 1
+   30  cat file1
+   31  ls -l
+   32  ls -l >> file1
+   33  LS
+   34  ls
+   35  cowsay "Hello, Charlie Brown. I am Helen Yang." >> file1
+   36  cat file1 
+   37  cowsay "Hello, Cohen Archbold. I am Helen Yang." >> file1
+   38  cat file1 
+   39  echo shell
+   40  echo $shell
+   41  echo $SHELL
+   42  man ls
+   43  history > file2 
+                                                                             
+ mmmmmm           "                          mmm   mmmm          mmmm  mmm   
+ #      m mm    mmm    mmm   m   m         m"   " #"   "        "   "#   #   
+ #mmmmm #"  #     #   #" "#  "m m"         #      "#mmm             m"   #   
+ #      #   #     #   #   #   #m#          #          "#          m"     #   
+ #mmmmm #   #     #   "#m#"   "#            "mmm" "mmm#"        m#mmmm mm#mm 
+                  #           m"                                             
+                ""           ""                                              
+                                                                             
+   mmm                                                                       
+ m"   "                                                                      
+ #m""#m                                                                      
+ #    #                                                                      
+  #mm#"                                                                      
+                                                                             
+                                                                             
