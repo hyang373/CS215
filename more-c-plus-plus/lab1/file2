@@ -34,7 +34,7 @@
    34  ls
    35  cowsay "Hello, Charlie Brown. I am Helen Yang." >> file1
    36  cat file1 
-   37  cowsay "Hello, Cohen Archbold. I am Helen Yang." >> file1
+   37  cowsay "Hello. I am Helen Yang." >> file1
    38  cat file1 
    39  echo shell
    40  echo $shell
