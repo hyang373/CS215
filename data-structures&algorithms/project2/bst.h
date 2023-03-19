@@ -12,6 +12,12 @@
 #include <iostream>
 using namespace std;
 
+struct node{
+        int key;
+        node *left;
+        node *right;
+};
+
 class BST
 {
         public:
@@ -35,6 +41,6 @@ class BST
                 void tree_print() const;
         private:
                 // declare private variable for binary search tree
-                vector<int> tree;
+                node *root;
 };
 #endif /* BST_H */
