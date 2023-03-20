@@ -121,6 +121,7 @@ int main(int argc, char* argv[]){
                 // print tree before deletion in "in-order traversal"
                 cout << "Binary Search Tree before Deletions of Nodes (In-oder Traversal)" << endl;
                 tree.tree_walk(Root);
+                cout << endl;
 
                 // delete node (values are in the queue "delete_nodes"
                 while(!delete_nodes.empty()){
@@ -131,6 +132,7 @@ int main(int argc, char* argv[]){
                 // print tree after deletion in "in-order traversal"
                 cout << "Binary Search Tree after Deletions of Nodes (In-oder Traversal)" << endl;
                 tree.tree_walk(Root);
+                cout << endl;
 
         }/*
         else{
