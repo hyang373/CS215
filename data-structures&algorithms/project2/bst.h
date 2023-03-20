@@ -16,8 +16,17 @@ struct node{
         int key;
         node *left;
         node *right;
+        node *parent;
 };
 typedef struct node node;
+
+struct node newNode(int value){
+        node *temp = new node;
+        temp->key = value;
+        temp->left = temp->right = NULL;
+        temp->parent = NULL;
+        return temp;
+}
 
 class BST
 {
@@ -26,22 +35,23 @@ class BST
                 BST();
 
                 // insert value into tree
-                void tree_insert(int value);
+                void tree_insert(node* &Root, int value);
 
                 // delete a value from trree
-                void tree_delete(int value);
+                void tree_delete(node* &Root, int value);
 
-                void transplant(node *num1, node *num2);
+                void transplant(node* &Root, node *num1, node *num2);
 
                 // find min of node pos
-                int tree_min(node *pos) const;
+                node* tree_min(node *pos);
 
                 // find max of node pos
-                int tree_man(node *pos) const;
+                node* tree_man(node *pos);
 
-                void inOrder_print() const;
+                void tree_walk() const;
         private:
-                // declare private variable for binary search tree
+                // declare private variables for binary search tree
                 node *root;
+
 };
 #endif /* BST_H */
