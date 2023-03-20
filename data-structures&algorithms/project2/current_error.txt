@@ -1,117 +1,12 @@
-/* Current working on project. -03/19/2023 */
+/* Current working on project. -03/20/2023 */
 Note: project files in github arent up-to-date
 
 ____Current Errors________
 
-In file included from bst.cpp:9:
-bst.h: In function ‘node newNode(int)’:
-bst.h:28:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   28 | }
-      | ^
-bst.cpp: In member function ‘void BST::tree_insert(node*&, int)’:
-bst.cpp:32:25: warning: NULL used in arithmetic [-Wpointer-arith]
-   32 |         while(x->key != NULL){
-      |                         ^~~~
-bst.cpp: In member function ‘void BST::tree_delete(node*&, int)’:
-bst.cpp:66:27: error: no matching function for call to ‘BST::transplant(node*&, node*&)’
-   66 |                 transplant(new_node, new_node->right)
-      |                 ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from bst.cpp:9:
-bst.h:42:22: note: candidate: ‘void BST::transplant(node*&, node*, node*)’
-   42 |                 void transplant(node* &Root, node *num1, node *num2);
-      |                      ^~~~~~~~~~
-bst.h:42:22: note:   candidate expects 3 arguments, 2 provided
-bst.cpp:69:27: error: no matching function for call to ‘BST::transplant(node*&, node*&)’
-   69 |                 transplant(new_node, new_node->left)
-      |                 ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from bst.cpp:9:
-bst.h:42:22: note: candidate: ‘void BST::transplant(node*&, node*, node*)’
-   42 |                 void transplant(node* &Root, node *num1, node *num2);
-      |                      ^~~~~~~~~~
-bst.h:42:22: note:   candidate expects 3 arguments, 2 provided
-bst.cpp:72:33: error: invalid conversion from ‘node*’ to ‘int’ [-fpermissiv
-]
-   72 |                 int y = tree_min(new_node->right);
-      |                         ~~~~~~~~^~~~~~~~~~~~~~~~~
-      |                                 |
-      |                                 node*
-bst.cpp:73:21: error: base operand of ‘->’ is not a pointer
-   73 |                 if(y->parent != new_node){
-      |                     ^~
-bst.cpp:74:40: error: base operand of ‘->’ is not a pointer
-   74 |                         transplant(y, y->right);
-      |                                        ^~
-bst.cpp:75:26: error: base operand of ‘->’ is not a pointer
-   75 |                         y->right = new_node->right;
-      |                          ^~
-bst.cpp:76:26: error: base operand of ‘->’ is not a pointer
-   76 |                         y->right->parent = y;
-      |                          ^~
-bst.cpp:78:27: error: no matching function for call to ‘BST::transplant(node*&, int&)’
-   78 |                 transplant(new_node, y);
-      |                 ~~~~~~~~~~^~~~~~~~~~~~~
-In file included from bst.cpp:9:
-bst.h:42:22: note: candidate: ‘void BST::transplant(node*&, node*, node*)’
-   42 |                 void transplant(node* &Root, node *num1, node *num2);
-      |                      ^~~~~~~~~~
-bst.h:42:22: note:   candidate expects 3 arguments, 2 provided
-bst.cpp:79:18: error: base operand of ‘->’ is not a pointer
-   79 |                 y->left = new_node->left;
-      |                  ^~
-bst.cpp:80:18: error: base operand of ‘->’ is not a pointer
-   80 |                 y->left->parent = y;
-      |                  ^~
-bst.cpp: At global scope:
-bst.cpp:87:6: error: no declaration matches ‘void BST::transplant(node*&, node*&, node*&)’
-   87 | void BST::transplant(node* &Root, node* &num1, node* &num2){
-      |      ^~~
-In file included from bst.cpp:9:
-bst.h:42:22: note: candidate is: ‘void BST::transplant(node*&, node*, node*
-’
-   42 |                 void transplant(node* &Root, node *num1, node *num2);
-      |                      ^~~~~~~~~~
-bst.h:30:7: note: ‘class BST’ defined here
-   30 | class BST
-      |       ^~~
-bst.cpp:119:6: error: no declaration matches ‘void BST::tree_walk(node*) const’
-  119 | void BST::tree_walk(node *Node) const{
-      |      ^~~
-In file included from bst.cpp:9:
-bst.h:50:22: note: candidate is: ‘void BST::tree_walk() const’
-   50 |                 void tree_walk() const;
-      |                      ^~~~~~~~~
-bst.h:30:7: note: ‘class BST’ defined here
-   30 | class BST
-      |       ^~~
-In file included from main.cpp:7:
-bst.h: In function ‘node newNode(int)’:
-bst.h:28:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   28 | }
-      | ^
-main.cpp: In function ‘int main(int, char**)’:
-main.cpp:67:9: error: ‘in_file’ was not declared in this scope
-   67 |         in_file.close();
-      |         ^~~~~~~
-main.cpp:112:28: error: conversion from ‘BST*’ to non-scalar type ‘BST’ requested
-  112 |                 BST tree = new BST();
-      |                            ^~~~~~~~~
-main.cpp:121:31: error: no matching function for call to ‘BST::tree_walk(node*&)’
-  121 |                 tree.tree_walk(Root);
-      |                 ~~~~~~~~~~~~~~^~~~~~
-In file included from main.cpp:7:
-bst.h:50:22: note: candidate: ‘void BST::tree_walk() const’
-   50 |                 void tree_walk() const;
-      |                      ^~~~~~~~~
-bst.h:50:22: note:   candidate expects 0 arguments, 1 provided
-main.cpp:131:31: error: no matching function for call to ‘BST::tree_walk(node*&)’
-  131 |                 tree.tree_walk(Root);
-      |                 ~~~~~~~~~~~~~~^~~~~~
-In file included from main.cpp:7:
-bst.h:50:22: note: candidate: ‘void BST::tree_walk() const’
-   50 |                 void tree_walk() const;
-      |                      ^~~~~~~~~
-bst.h:50:22: note:   candidate expects 0 arguments, 1 provided
-bst.h: In function ‘node newNode(int)’:
-bst.h:28:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   28 | }
-      | ^
+ ./trees deleteNodes.csv testrandom.csv
+Which file is the tree data file?
+If its the 1st file, enter 1. If its the 2nd file, enter 2.
+2
+Would you like to implement a Binary Search Tree (BST) or a Red-Black Tree (RBT)?
+BST
+Segmentation fault (core dumped)
