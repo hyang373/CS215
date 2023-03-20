@@ -17,6 +17,7 @@ struct node{
         node *left;
         node *right;
 };
+typedef struct node node;
 
 class BST
 {
