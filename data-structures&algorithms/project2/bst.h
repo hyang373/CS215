@@ -32,15 +32,19 @@ class BST
                 // delete a value from trree
                 void tree_delete(node*& Root, int value);
 
+                node* tree_search(node* Root, int value) const;
+
                 void transplant(node*& Root, node*& num1, node*& num2);
 
                 // find min of node pos
                 node* tree_min(node *pos);
 
                 // find max of node pos
-                node* tree_man(node *pos);
+                node* tree_max(node *pos);
 
                 void tree_walk(node* Root) const;
+
+                int tree_height(node* Root);
 
         private:
                 // declare private variables for binary search tree
