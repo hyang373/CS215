@@ -22,7 +22,7 @@ class BST
 {
         public:
                 // default constructor
-                create_tree();
+                BST();
 
                 // insert value into tree
                 void tree_insert(int value);
@@ -30,15 +30,15 @@ class BST
                 // delete a value from trree
                 void tree_delete(int value);
 
-                void transplant(int num1, int num2);
+                void transplant(node *num1, node *num2);
 
                 // find min of node pos
-                int tree_min(int pos) const;
+                int tree_min(node *pos) const;
 
                 // find max of node pos
-                int tree_man(int pos) const;
+                int tree_man(node *pos) const;
 
-                void tree_print() const;
+                void inOrder_print() const;
         private:
                 // declare private variable for binary search tree
                 node *root;
