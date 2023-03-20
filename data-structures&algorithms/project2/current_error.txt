@@ -1,0 +1,127 @@
+/* Current working on project. -03/19/2023 */
+
+____Current Errors________
+
+In file included from bst.cpp:9:
+bst.h: In function ‘node newNode(int)’:
+bst.h:28:16: error: could not convert ‘temp’ from ‘node*’ to ‘node’
+   28 |         return temp;
+      |                ^~~~
+      |                |
+      |                node*
+bst.cpp: In constructor ‘BST::BST()’:
+bst.cpp:19:1: error: expected ‘;’ before ‘}’ token
+   19 | }
+      | ^
+bst.cpp: In member function ‘void BST::tree_insert(node*&, int)’:
+bst.cpp:24:33: error: cannot convert ‘node’ to ‘node*’ in initialization
+   24 |         node *new_node = newNode(value);
+      |                          ~~~~~~~^~~~~~~
+      |                                 |
+      |                                 node
+bst.cpp:29:25: warning: NULL used in arithmetic [-Wpointer-arith]
+   29 |         while(x->key != NULL){
+      |                         ^~~~
+bst.cpp: In member function ‘void BST::tree_delete(node*&, int)’:
+bst.cpp:56:33: error: cannot convert ‘node’ to ‘node*’ in initialization
+   56 |         node *new_node = newNode(value);
+      |                          ~~~~~~~^~~~~~~
+      |                                 |
+      |                                 node
+bst.cpp:59:27: error: no matching function for call to ‘BST::transplant(node*&, node*&)’
+   59 |                 transplant(new_node, new_node->right)
+      |                 ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from bst.cpp:9:
+bst.h:43:22: note: candidate: ‘void BST::transplant(node*&, node*, node*)’
+   43 |                 void transplant(node* &Root, node *num1, node *num2);
+      |                      ^~~~~~~~~~
+bst.h:43:22: note:   candidate expects 3 arguments, 2 provided
+bst.cpp:62:27: error: no matching function for call to ‘BST::transplant(node*&, node*&)’
+   62 |                 transplant(new_node, new_node->left)
+      |                 ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from bst.cpp:9:
+bst.h:43:22: note: candidate: ‘void BST::transplant(node*&, node*, node*)’
+   43 |                 void transplant(node* &Root, node *num1, node *num2);
+      |                      ^~~~~~~~~~
+bst.h:43:22: note:   candidate expects 3 arguments, 2 provided
+bst.cpp:65:33: error: invalid conversion from ‘node*’ to ‘int’ [-fpermissiv
+]
+   65 |                 int y = tree_min(new_node->right);
+      |                         ~~~~~~~~^~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 node*
+bst.cpp:66:21: error: base operand of ‘->’ is not a pointer
+   66 |                 if(y->parent != new_node){
+      |                     ^~
+bst.cpp:67:40: error: base operand of ‘->’ is not a pointer
+   67 |                         transplant(y, y->right);
+      |                                        ^~
+bst.cpp:68:26: error: base operand of ‘->’ is not a pointer
+   68 |                         y->right = new_node->right;
+      |                          ^~
+bst.cpp:69:26: error: base operand of ‘->’ is not a pointer
+   69 |                         y->right->parent = y;
+      |                          ^~
+bst.cpp:71:27: error: no matching function for call to ‘BST::transplant(node*&, int&)’
+   71 |                 transplant(new_node, y);
+      |                 ~~~~~~~~~~^~~~~~~~~~~~~
+In file included from bst.cpp:9:
+bst.h:43:22: note: candidate: ‘void BST::transplant(node*&, node*, node*)’
+   43 |                 void transplant(node* &Root, node *num1, node *num2);
+      |                      ^~~~~~~~~~
+bst.h:43:22: note:   candidate expects 3 arguments, 2 provided
+bst.cpp:72:18: error: base operand of ‘->’ is not a pointer
+   72 |                 y->left = new_node->left;
+      |                  ^~
+bst.cpp:73:18: error: base operand of ‘->’ is not a pointer
+   73 |                 y->left->parent = y;
+      |                  ^~
+bst.cpp: At global scope:
+bst.cpp:80:6: error: no declaration matches ‘void BST::transplant(node*&, node*&, node*&)’
+   80 | void BST::transplant(node* &Root, node* &num1, node* &num2){
+      |      ^~~
+In file included from bst.cpp:9:
+bst.h:43:22: note: candidate is: ‘void BST::transplant(node*&, node*, node*
+’
+   43 |                 void transplant(node* &Root, node *num1, node *num2);
+      |                      ^~~~~~~~~~
+bst.h:31:7: note: ‘class BST’ defined here
+   31 | class BST
+      |       ^~~
+bst.cpp:112:6: error: no declaration matches ‘void BST::tree_walk(node*) const’
+  112 | void BST::tree_walk(node *Node) const{
+      |      ^~~
+In file included from bst.cpp:9:
+bst.h:51:22: note: candidate is: ‘void BST::tree_walk() const’
+   51 |                 void tree_walk() const;
+      |                      ^~~~~~~~~
+bst.h:31:7: note: ‘class BST’ defined here
+   31 | class BST
+      |       ^~~
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:68:9: error: ‘in_file’ was not declared in this scope
+   68 |         in_file.close();
+      |         ^~~~~~~
+main.cpp:113:17: error: ‘BST’ was not declared in this scope
+  113 |                 BST tree = new BST();
+      |                 ^~~
+main.cpp:114:17: error: ‘node’ was not declared in this scope
+  114 |                 node *Root = NULL;
+      |                 ^~~~
+main.cpp:114:23: error: ‘Root’ was not declared in this scope
+  114 |                 node *Root = NULL;
+      |                       ^~~~
+main.cpp:116:25: error: ‘tree’ was not declared in this scope; did you mean ‘free’?
+  116 |                         tree.tree_insert(Root, data.front());
+      |                         ^~~~
+      |                         free
+main.cpp:122:17: error: ‘tree’ was not declared in this scope; did you mean ‘free’?
+  122 |                 tree.tree_walk(Root);
+      |                 ^~~~
+      |                 free
+bst.h: In function ‘node newNode(int)’:
+bst.h:28:16: error: could not convert ‘temp’ from ‘node*’ to ‘node’
+   28 |         return temp;
+      |                ^~~~
+      |                |
+      |                node*
