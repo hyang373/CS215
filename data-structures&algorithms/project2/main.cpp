@@ -5,6 +5,7 @@
 #include <string>
 #include <cstdlib>
 #include "bst.h"
+#include "rbt.h"
 using namespace std;
 
 int main(int argc, char* argv[]){
@@ -119,7 +120,7 @@ int main(int argc, char* argv[]){
                 }
 
                 // print tree before deletion in "in-order traversal"
-                cout << "Binary Search Tree before Deletions of Nodes (In-oder Traversal)" << endl;
+                cout << "Binary Search Tree before Deletions of Nodes (In-order Traversal)" << endl;
                 tree.tree_walk(Root);
                 cout << endl;
 
@@ -130,33 +131,36 @@ int main(int argc, char* argv[]){
                 }
 
                 // print tree after deletion in "in-order traversal"
-                cout << "Binary Search Tree after Deletions of Nodes (In-oder Traversal)" << endl;
+                cout << "Binary Search Tree after Deletions of Nodes (In-order Traversal)" << endl;
                 tree.tree_walk(Root);
                 cout << endl;
 
-        }/*
+        }
         else{
                 // create a RBT with the queue "data"
-                RBT tree = new RBT();
+                RBT tree;
+                node *Root = NULL;
                 while(!data.empty()){
-                        tree.RB_insert(data.front());
+                        tree.RB_insert(Root, data.front());
                         data.pop();
                 }
 
                 // print tree before deletion in "in-order traversal"
-                cout << "Red-Black Tree before Deletions of Nodes (In-oder Traversal)" << endl;
-                tree.RB_inOrder();
+                cout << "Red-Black Tree before Deletions of Nodes (In-order Traversal)" << endl;
+                tree.RB_inOrder(Root);
+                cout << endl;
 
                 // delete node (values are in the queue "delete_nodes"
                 while(!delete_nodes.empty()){
-                        tree.RB_delete(delete_nodes.front());
+                        tree.RB_delete(Root, delete_nodes.front());
                         delete_nodes.pop();
                 }
 
                 // print tree after deletion in "in-order traversal"
-                cout << "Red-Black Tree after Deletions of Nodes (In-oder Traversal)" << endl;
-                tree.RB_inOrder();
-        }*/
+                cout << "Red-Black Tree after Deletions of Nodes (In-order Traversal)" << endl;
+                tree.RB_inOrder(Root);
+                cout << endl;
+        }
 
 
         return 0;
