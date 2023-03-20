@@ -5,13 +5,12 @@
 #include <string>
 #include <cstdlib>
 #include "bst.h"
-#include "rbt.h"
 using namespace std;
 
 int main(int argc, char* argv[]){
 
         if(argc != 3){
-                cout << "Usage: " << argv[0] << " <file_name1> "<< "<file_name2> "<< endl;
+                cout << "Usage: " << argv[0] << " <file_name1> "<< "<file_name2> "<<endl;
                 return 1;
         }
 
@@ -20,7 +19,7 @@ int main(int argc, char* argv[]){
         int delete_node_file_num;
 
         do{
-                cout << "Which file is the binary tree file?" << endl;
+                cout << "Which file is the tree data file?" << endl;
                 cout << "If its the 1st file, enter 1. If its the 2nd file, enter 2." << endl;
                 cin >> tree_file_num;
         }while((tree_file_num != 1) && (tree_file_num != 2));
@@ -65,7 +64,7 @@ int main(int argc, char* argv[]){
                 data.push(number);
 
         }
-        in_file.close();
+        tree_file.close();
         /**************************************************************************/
         // file pointer
         ifstream delete_node_file;
@@ -99,7 +98,7 @@ int main(int argc, char* argv[]){
                 delete_nodes.push(number);
 
         }
-        in_file.close();
+        delete_node_file.close();
 
         // create a tree (binary or red-black?)
         string input;
@@ -110,27 +109,30 @@ int main(int argc, char* argv[]){
 
         if(input == "BST"){
                 // create a BST with the queue "data"
-                BST tree = new BST();
+                //BST tree.BST();
+                BST tree;
+
+                node *Root = NULL;
                 while(!data.empty()){
-                        tree.tree_insert(data.front());
+                        tree.tree_insert(Root, data.front());
                         data.pop();
                 }
 
                 // print tree before deletion in "in-order traversal"
                 cout << "Binary Search Tree before Deletions of Nodes (In-oder Traversal)" << endl;
-                tree.inOrder_print();
+                tree.tree_walk(Root);
 
                 // delete node (values are in the queue "delete_nodes"
                 while(!delete_nodes.empty()){
-                        tree.tree_delete(delete_nodes.front());
+                        tree.tree_delete(Root, delete_nodes.front());
                         delete_nodes.pop();
                 }
 
                 // print tree after deletion in "in-order traversal"
                 cout << "Binary Search Tree after Deletions of Nodes (In-oder Traversal)" << endl;
-                tree.inOrder_print();
+                tree.tree_walk(Root);
 
-        }
+        }/*
         else{
                 // create a RBT with the queue "data"
                 RBT tree = new RBT();
@@ -152,7 +154,7 @@ int main(int argc, char* argv[]){
                 // print tree after deletion in "in-order traversal"
                 cout << "Red-Black Tree after Deletions of Nodes (In-oder Traversal)" << endl;
                 tree.RB_inOrder();
-        }
+        }*/
 
 
         return 0;
