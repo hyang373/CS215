@@ -1,17 +1,17 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <queue>
 #include <sstream>
 #include <string>
-#include <cmath>
 #include <cstdlib>
+#include "bst.h"
+#include "rbt.h"
 using namespace std;
 
 int main(int argc, char* argv[]){
 
         if(argc != 3){
-                cout << "Usage: " << argv[0] << " <file_name> "<< endl;
+                cout << "Usage: " << argv[0] << " <file_name1> "<< "<file_name2> "<< endl;
                 return 1;
         }
 
@@ -133,7 +133,7 @@ int main(int argc, char* argv[]){
         }
         else{
                 // create a RBT with the queue "data"
-                RST tree = new RST();
+                RBT tree = new RBT();
                 while(!data.empty()){
                         tree.RB_insert(data.front());
                         data.pop();
