@@ -12,21 +12,24 @@ using namespace std;
 
 // default constructor
 BST::BST(){
-        root = NULL;
+        root->key = 0;
         root->left = NULL;
         root->right = NULL;
-        root->parent = NULL
+        root->parent = NULL;
 }
 
 // insert value into tree
-void BST::tree_insert(node* &Root, int value){
+void BST::tree_insert(node*& Root, int value){
         // create a new node for value
-        node *new_node = newNode(value);
+        node *new_node;
+        new_node->key = value;
+        new_node->left = new_node->right = NULL;
+        new_node->parent = NULL;
 
         node *y = NULL;
         node *x = root;
         // traversal through the tree
-        while(x->key != NULL){
+        while(x->key > 0){
                 // keeps track of the node that lead to x
                 y = x;
 
@@ -52,23 +55,27 @@ void BST::tree_insert(node* &Root, int value){
 }
 
 // delete a value from trree
-void BST::tree_delete(node* &Root, int value){
-        node *new_node = newNode(value);
+void BST::tree_delete(node*& Root, int value){
+        // create a new node for value
+        node *new_node;
+        new_node->key = value;
+        new_node->left = new_node->right = NULL;
+        new_node->parent = NULL;
 
         if(new_node->left == NULL){
-                transplant(new_node, new_node->right)
+                transplant(root, new_node, new_node->right);
         }
         else if(new_node->right == NULL){
-                transplant(new_node, new_node->left)
+                transplant(root, new_node, new_node->left);
         }
         else{
-                int y = tree_min(new_node->right);
+                node* y = tree_min(new_node->right);
                 if(y->parent != new_node){
-                        transplant(y, y->right);
+                        transplant(root, y, y->right);
                         y->right = new_node->right;
                         y->right->parent = y;
                 }
-                transplant(new_node, y);
+                transplant(root, new_node, y);
                 y->left = new_node->left;
                 y->left->parent = y;
         }
@@ -77,7 +84,7 @@ void BST::tree_delete(node* &Root, int value){
 
 }
 
-void BST::transplant(node* &Root, node* &num1, node* &num2){
+void BST::transplant(node*& Root, node*& num1, node*& num2){
         if(num1->parent == NULL){
                 root = num2;
         }
@@ -109,7 +116,7 @@ node* BST::tree_man(node* pos){
         return pos;
 }
 
-void BST::tree_walk(node *Node) const{
+void BST::tree_walk(node* Node) const{
         if(Node != NULL){
                 tree_walk(Node->left);
                 cout << Node->key << " ";
