@@ -1,5 +1,5 @@
-/* Current working on project. -03/20/2023 */
-Note: project files in github arent up-to-date
+/* Began on 03/10/2023
+ * Current working on project. -03/20/2023 */
 
 ____Current Errors________
 
