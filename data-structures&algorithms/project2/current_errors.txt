@@ -18,62 +18,15 @@ Binary Search Tree after Deletions of Nodes (In-oder Traversal)
 
 /* Errors for RBT */
 
-main.cpp: In function ‘int main(int, char**)’:
-main.cpp:144:40: error: cannot convert ‘node*’ to ‘node_one*&’
-  144 |                         tree.RB_insert(Root, data.front());
-      |                                        ^~~~
-      |                                        |
-      |                                        node*
-In file included from main.cpp:8:
-rbt.h:32:43: note:   initializing argument 1 of ‘void RBT::RB_insert(node_one*&, int)’
-   32 |                 void RB_insert(node_one*& Root, int value);
-      |                                ~~~~~~~~~~~^~~~
-main.cpp:150:30: error: cannot convert ‘node*’ to ‘node_one*’
-  150 |                 tree.RB_walk(Root);
-      |                              ^~~~
-      |                              |
-      |                              node*
-In file included from main.cpp:8:
-rbt.h:38:40: note:   initializing argument 1 of ‘void RBT::RB_walk(node_one*) const’
-   38 |                 void RB_walk(node_one* Node) const;
-      |                              ~~~~~~~~~~^~~~
-main.cpp:155:40: error: cannot convert ‘node*’ to ‘node_one*&’
-  155 |                         tree.RB_delete(Root, delete_nodes.front());
-      |                                        ^~~~
-      |                                        |
-      |                                        node*
-In file included from main.cpp:8:
-rbt.h:35:43: note:   initializing argument 1 of ‘void RBT::RB_delete(node_one*&, int)’
-   35 |                 void RB_delete(node_one*& Root, int value);
-      |                                ~~~~~~~~~~~^~~~
-main.cpp:161:30: error: cannot convert ‘node*’ to ‘node_one*’
-  161 |                 tree.RB_walk(Root);
-      |                              ^~~~
-      |                              |
-      |                              node*
-In file included from main.cpp:8:
-rbt.h:38:40: note:   initializing argument 1 of ‘void RBT::RB_walk(node_one*) const’
-   38 |                 void RB_walk(node_one* Node) const;
-      |                              ~~~~~~~~~~^~~~
-rbt.cpp: In member function ‘void RBT::RB_insertFixup(node_one*&, node_one*&)’:
-rbt.cpp:66:33: error: ‘z’ was not declared in this scope
-   66 |                                 z->parent->parent->color = "RED";
-      |                                 ^
-rbt.cpp:85:33: error: ‘z’ was not declared in this scope
-   85 |                                 z->parent->parent->color = "RED";
-      |                                 ^
-rbt.cpp: At global scope:
 rbt.cpp:103:6: error: ‘RST’ has not been declared
   103 | void RST::left_rotate(node_one*& Root, node_one*& Node){
       |      ^~~
 rbt.cpp: In function ‘void left_rotate(node_one*&, node_one*&)’:
-rbt.cpp:111:17: error: ‘root’ was not declared in this scope; did you mean
-Root’?
+rbt.cpp:111:17: error: ‘root’ was not declared in this scope; did you mean ‘Root’?
   111 |                 root = y;
       |                 ^~~~
       |                 Root
-rbt.cpp:121:16: error: ‘root’ was not declared in this scope; did you mean
-Root’?
+rbt.cpp:121:16: error: ‘root’ was not declared in this scope; did you mean ‘Root’?
   121 |         Root = root;
       |                ^~~~
       |                Root
@@ -82,22 +35,11 @@ rbt.cpp:123:6: error: ‘RST’ has not been declared
   123 | void RST::right_rotate(node_one*& Root, node_one*& Node){
       |      ^~~
 rbt.cpp: In function ‘void right_rotate(node_one*&, node_one*&)’:
-rbt.cpp:131:17: error: ‘root’ was not declared in this scope; did you mean
-Root’?
+rbt.cpp:131:17: error: ‘root’ was not declared in this scope; did you mean ‘Root’?
   131 |                 root = y;
       |                 ^~~~
       |                 Root
-rbt.cpp:141:16: error: ‘root’ was not declared in this scope; did you mean
-Root’?
+rbt.cpp:141:16: error: ‘root’ was not declared in this scope; did you mean ‘Root’?
   141 |         Root = root;
       |                ^~~~
       |                Root
-rbt.cpp: In member function ‘void RBT::RB_delete(node_one*&, int)’:
-rbt.cpp:170:25: error: ‘RB_transplant’ was not declared in this scope; did you mean ‘transplant’?
-  170 |                         RB_transplant(root, y, y->right);
-      |                         ^~~~~~~~~~~~~
-      |                         transplant
-rbt.cpp:174:17: error: ‘RB_transplant’ was not declared in this scope; did you mean ‘transplant’?
-  174 |                 RB_transplant(root, del_node, y);
-      |                 ^~~~~~~~~~~~~
-      |                 transplant
