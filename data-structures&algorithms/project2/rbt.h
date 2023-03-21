@@ -13,12 +13,14 @@
 #include <string>
 using namespace std;
 
+enum Color {RED, BLACK};
+
 struct node1{
         int key;
         node *left;
         node *right;
         node *parent;
-        string color;
+        bool color;
         bool T_root;
 };
 typedef struct node1 node1;
