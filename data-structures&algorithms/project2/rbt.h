@@ -13,17 +13,14 @@
 #include <string>
 using namespace std;
 
-enum Color {RED, BLACK};
-
-struct node1{
+struct node_one{
         int key;
         node *left;
         node *right;
         node *parent;
-        bool color;
-        bool T_root;
+        string color;
 };
-typedef struct node1 node1;
+typedef struct node_one node_one;
 
 class RBT
 {
@@ -32,28 +29,28 @@ class RBT
                 RBT();
 
                 // insert value into tree
-                void RB_insert(node*& tree, int value);
-                void RB_insertFixup(node*& tree, node*& Node);
+                void RB_insert(node_one*& Root, int value);
 
                 // delete a value from trree
-                void RB_delete(node*& tree, int value);
-                void RB_deleteFixup(node*& tree, node*& Node);
-                node* RB_search(node* Node, int value) const;
-                void transplant(node*& tree, node*& num1, node*& num2);
+                void RB_delete(node_one*& Root, int value);
 
-                // find min of node pos
-                node* tree_min(node *pos);
+                // print tree in order
+                void RB_walk(node_one* Node) const;
 
-                // find max of node pos
-                node* tree_max(node *pos);
-
-                void tree_walk(node* Root) const;
-
-                int tree_height(node* Root);
+                // determine tree height
+                int RB_height(node_one* Node);
 
         private:
                 // declare private variables for binary search tree
-                node *root;
+                node_one *root;
+                void RB_insertFixup(node_one*& Root, node_one*& Node);
+                void RB_deleteFixup(node_one*& Root, node_one*& Node);
+                node_one* RB_search(node_one* Node, int value) const;
+                void transplant(node_one*& Root, node_one*& num1, node_one*& num2);
+                void left_rotate(node_one*& Root, node_one*& Node);
+                void right_rotate(node_one*& Root, node_one*& Node);
+                node_one* RB_min(node_one *pos);
+                node_one* RB_max(node_one *pos);
 
 };
 #endif /* RBT_H */
