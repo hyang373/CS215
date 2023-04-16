@@ -1,25 +1,3 @@
-In file included from graph.cpp:12:
-graph.h:10:9: error: ‘vertex’ does not name a type
-   10 |         vertex *from;
-      |         ^~~~~~
-graph.h:11:9: error: ‘vertex’ does not name a type
-   11 |         vertex *to;
-      |         ^~~~~~
-graph.cpp: In member function ‘void Graph::addEdge(edge*)’:
-graph.cpp:25:20: error: ‘edge’ {aka ‘struct edge’} has no member named ‘fro
-’
-   25 |         adjList[e->from].push_back({e->to, e->distance});
-      |                    ^~~~
-graph.cpp:25:40: error: ‘edge’ {aka ‘struct edge’} has no member named ‘to’
-   25 |         adjList[e->from].push_back({e->to, e->distance});
-      |                                        ^~
-graph.cpp:26:20: error: ‘edge’ {aka ‘struct edge’} has no member named ‘to’
-   26 |         adjList[e->to].push_back({e->from, e->distance});
-      |                    ^~
-graph.cpp:26:38: error: ‘edge’ {aka ‘struct edge’} has no member named ‘fro
-’
-   26 |         adjList[e->to].push_back({e->from, e->distance});
-      |                                      ^~~~
 graph.cpp: In member function ‘void Graph::print_path(std::string, std::string)’:
 graph.cpp:73:22: error: ‘struct std::_Rb_tree_iterator<std::pair<vertex* const, std::__cxx11::list<std::pair<vertex*, int> > > >’ has no member named ‘first’
    73 |                 if(p.first->name == from){
@@ -36,13 +14,6 @@ graph.cpp:77:33: error: ‘struct std::_Rb_tree_iterator<std::pair<vertex* const
 graph.cpp:88:36: error: base operand of ‘->’ has non-pointer type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’}
    88 |                 print_path(from, to->parent->name);
       |                                    ^~
-In file included from main.cpp:13:
-graph.h:10:9: error: ‘vertex’ does not name a type
-   10 |         vertex *from;
-      |         ^~~~~~
-graph.h:11:9: error: ‘vertex’ does not name a type
-   11 |         vertex *to;
-      |         ^~~~~~
 main.cpp: In function ‘int main(int, char**)’:
 main.cpp:51:67: error: no match for ‘operator[]’ (operand types are ‘char**’ and ‘std::ifstream’ {aka ‘std::basic_ifstream<char>’})
    51 |       cout << "Warning: cannot open file named " << argv[vertices_file] << "!" << endl;
@@ -50,13 +21,6 @@ main.cpp:51:67: error: no match for ‘operator[]’ (operand types are ‘char*
 
 main.cpp:51:67: note: candidate: ‘operator[](char**, long int)’ (built-in)
 main.cpp:51:67: note:   no known conversion for argument 2 from ‘std::ifstream’ {aka ‘std::basic_ifstream<char>’} to ‘long int’
-main.cpp:104:23: error: ‘edge’ {aka ‘struct edge’} has no member named ‘fro
-’
-  104 |                 info->from->name = tempString;
-      |                       ^~~~
-main.cpp:108:23: error: ‘edge’ {aka ‘struct edge’} has no member named ‘to’
-  108 |                 info->to->name = tempString;
-      |                       ^~
 main.cpp:123:15: error: cannot convert ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘vertex*’
   123 |         g.BFS(from);
       |               ^~~~
@@ -66,9 +30,3 @@ In file included from main.cpp:13:
 graph.h:41:34: note:   initializing argument 1 of ‘void Graph::BFS(vertex*)’
    41 |                 void BFS(vertex *source);
       |                          ~~~~~~~~^~~~~~
-graph.h:10:9: error: ‘vertex’ does not name a type
-   10 |         vertex *from;
-      |         ^~~~~~
-graph.h:11:9: error: ‘vertex’ does not name a type
-   11 |         vertex *to;
-      |         ^~~~~~
